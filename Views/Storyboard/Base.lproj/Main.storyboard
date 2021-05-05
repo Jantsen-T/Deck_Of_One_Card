@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R01-Cn-ogS">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Card View Controller-->
+        <scene sceneID="sGY-0Z-TKh">
+            <objects>
+                <viewController id="R01-Cn-ogS" customClass="CardViewController" customModule="DeckOfOneCard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IZa-P0-4L8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Stq-Vm-dIi">
+                                <rect key="frame" x="138" y="384" width="138" height="138"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Stq-Vm-dIi" secondAttribute="height" multiplier="1:1" id="3Gc-vV-ZII"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTi-OC-BRV">
+                                <rect key="frame" x="186" y="362" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hsc-63-BgL">
+                                <rect key="frame" x="161" y="758" width="92" height="69"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="shuffleButtonTapped:" destination="R01-Cn-ogS" eventType="touchUpInside" id="fXW-QF-aEX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dAx-36-yHn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Stq-Vm-dIi" firstAttribute="top" secondItem="dAx-36-yHn" secondAttribute="top" constant="340" id="3Nq-kE-5yZ"/>
+                            <constraint firstItem="Stq-Vm-dIi" firstAttribute="top" secondItem="CTi-OC-BRV" secondAttribute="bottom" constant="1" id="7Qj-Nw-8UM"/>
+                            <constraint firstItem="dAx-36-yHn" firstAttribute="trailing" secondItem="Hsc-63-BgL" secondAttribute="trailing" constant="161" id="9CY-kd-EWN"/>
+                            <constraint firstItem="dAx-36-yHn" firstAttribute="bottom" secondItem="Hsc-63-BgL" secondAttribute="bottom" constant="35" id="CJG-dr-UUY"/>
+                            <constraint firstItem="Stq-Vm-dIi" firstAttribute="centerX" secondItem="dAx-36-yHn" secondAttribute="centerX" id="Cb6-dl-PAL"/>
+                            <constraint firstItem="Stq-Vm-dIi" firstAttribute="centerY" secondItem="dAx-36-yHn" secondAttribute="centerY" id="DLm-kg-bay"/>
+                            <constraint firstItem="Hsc-63-BgL" firstAttribute="leading" secondItem="dAx-36-yHn" secondAttribute="leading" constant="161" id="ECM-qC-60j"/>
+                            <constraint firstItem="CTi-OC-BRV" firstAttribute="centerX" secondItem="dAx-36-yHn" secondAttribute="centerX" id="XaT-TY-KCf"/>
+                            <constraint firstItem="Hsc-63-BgL" firstAttribute="top" secondItem="Stq-Vm-dIi" secondAttribute="bottom" constant="236" id="rEl-uO-Y2J"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cardLabel" destination="CTi-OC-BRV" id="W1w-ff-VRJ"/>
+                        <outlet property="cardUIImage" destination="Stq-Vm-dIi" id="QEc-7F-PpP"/>
+                        <outlet property="shuffleButton" destination="Hsc-63-BgL" id="2GE-9O-kDk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZKM-Hs-mUX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="365.21739130434787" y="-254.46428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
